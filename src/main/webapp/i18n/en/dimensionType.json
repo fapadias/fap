@@ -1,0 +1,9 @@
+{
+    "jhipsterSampleApplicationApp": {
+        "DimensionType" : {
+            "null": "",
+            "SIMPLE": "SIMPLE",
+            "COMPOSITE": "COMPOSITE"
+        }
+    }
+}

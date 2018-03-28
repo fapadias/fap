@@ -1,0 +1,24 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "costGride" : {
+            "home": {
+                "title": "CostGrides",
+                "createLabel": "Créer un nouveau Cost Gride",
+                "createOrEditLabel": "Créer ou éditer un Cost Gride"
+            },
+            "created": "Un nouveau Cost Gride a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Cost Gride avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Cost Gride avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Cost Gride {{ id }} ?"
+            },
+            "detail": {
+                "title": "Cost Gride"
+            },
+            "fileName": "File Name",
+            "version": "Version",
+            "transporter": "Transporter"
+        }
+    }
+}

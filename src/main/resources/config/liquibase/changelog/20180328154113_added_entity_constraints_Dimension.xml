@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Dimension.
+    -->
+    <changeSet id="20180328154113-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="cost_gride_id"
+                                 baseTableName="dimension"
+                                 constraintName="fk_dimension_cost_gride_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cost_gride"/>
+
+        <addForeignKeyConstraint baseColumnNames="metric_id"
+                                 baseTableName="dimension"
+                                 constraintName="fk_dimension_metric_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="metric"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,66 @@
+<div>
+    <h2>
+        <span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.home.title">Invoice Lines</span>
+        <button class="btn btn-primary float-right jh-create-entity create-invoice-line" [routerLink]="['/', { outlets: { popup: ['invoice-line-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.home.createLabel">
+            Create new Invoice Line
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="invoiceLines">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.name">Name</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.amount">Amount</span></th>
+            <th><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.entryData">Entry Data</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let invoiceLine of invoiceLines ;trackBy: trackId">
+                <td><a [routerLink]="['../invoice-line', invoiceLine.id ]">{{invoiceLine.id}}</a></td>
+                <td>{{invoiceLine.name}}</td>
+                <td>{{invoiceLine.amount}}</td>
+                <td>
+                    <div *ngIf="invoiceLine.entryDataId">
+                        <a [routerLink]="['../entry-data', invoiceLine.entryDataId  ]" >{{invoiceLine.entryDataId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../invoice-line', invoiceLine.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'invoice-line/'+ invoiceLine.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'invoice-line/'+ invoiceLine.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

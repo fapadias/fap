@@ -1,0 +1,54 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myDimensionValueLabel" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.home.createOrEditLabel">Create or edit a Dimension Value</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!dimensionValue.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="dimensionValue.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.stringValue" for="field_stringValue">String Value</label>
+            <input type="text" class="form-control" name="stringValue" id="field_stringValue"
+                [(ngModel)]="dimensionValue.stringValue" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.lowerBound" for="field_lowerBound">Lower Bound</label>
+            <input type="text" class="form-control" name="lowerBound" id="field_lowerBound"
+                [(ngModel)]="dimensionValue.lowerBound" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.upperBound" for="field_upperBound">Upper Bound</label>
+            <input type="text" class="form-control" name="upperBound" id="field_upperBound"
+                [(ngModel)]="dimensionValue.upperBound" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.dimension" for="field_dimension">Dimension</label>
+            <select class="form-control" id="field_dimension" name="dimension" [(ngModel)]="dimensionValue.dimensionId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="dimensionOption.id" *ngFor="let dimensionOption of dimensions; trackBy: trackDimensionById">{{dimensionOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.dimensionValue.metricValue" for="field_metricValue">Metric Value</label>
+            <select class="form-control" id="field_metricValue" name="metricValue" [(ngModel)]="dimensionValue.metricValueId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="metricValueOption.id" *ngFor="let metricValueOption of metricvalues; trackBy: trackMetricValueById">{{metricValueOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

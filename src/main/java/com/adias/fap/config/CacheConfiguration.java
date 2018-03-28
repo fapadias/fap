@@ -42,6 +42,19 @@ public class CacheConfiguration {
             cm.createCache(com.adias.fap.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(com.adias.fap.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.adias.fap.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.Transporter.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.CostGride.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.Dimension.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.DimensionValue.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.Metric.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.Metric.class.getName() + ".dimensions", jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.MetricValue.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.MetricValue.class.getName() + ".dimensions", jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.EntryData.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.EntryData.class.getName() + ".lines", jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.InvoiceLine.class.getName(), jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.InvoiceLine.class.getName() + ".attributes", jcacheConfiguration);
+            cm.createCache(com.adias.fap.domain.InvoiceKeyValue.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

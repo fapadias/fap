@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "dimensions",
+            "otherEntityName": "dimensionValue",
+            "otherEntityRelationshipName": "metricValue"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "metric",
+            "otherEntityName": "metric",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "value",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "faceValue",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180328154116",
+    "entityTableName": "metric_value",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

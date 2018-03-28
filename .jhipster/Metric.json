@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "dimensions",
+            "otherEntityName": "dimension",
+            "otherEntityRelationshipName": "metric"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "costGride",
+            "otherEntityName": "costGride",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180328154115",
+    "entityTableName": "metric",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

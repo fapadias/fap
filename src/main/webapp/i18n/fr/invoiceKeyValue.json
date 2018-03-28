@@ -1,0 +1,24 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "invoiceKeyValue" : {
+            "home": {
+                "title": "InvoiceKeyValues",
+                "createLabel": "Créer un nouveau Invoice Key Value",
+                "createOrEditLabel": "Créer ou éditer un Invoice Key Value"
+            },
+            "created": "Un nouveau Invoice Key Value a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Invoice Key Value avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Invoice Key Value avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Invoice Key Value {{ id }} ?"
+            },
+            "detail": {
+                "title": "Invoice Key Value"
+            },
+            "key": "Key",
+            "value": "Value",
+            "invoiceLine": "Invoice Line"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+
+<div *ngIf="invoiceKeyValue">
+    <h2><span jhiTranslate="jhipsterSampleApplicationApp.invoiceKeyValue.detail.title">Invoice Key Value</span> {{invoiceKeyValue.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceKeyValue.key">Key</span></dt>
+        <dd>
+            <span>{{invoiceKeyValue.key}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceKeyValue.value">Value</span></dt>
+        <dd>
+            <span>{{invoiceKeyValue.value}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceKeyValue.invoiceLine">Invoice Line</span></dt>
+        <dd>
+            <div *ngIf="invoiceKeyValue.invoiceLineId">
+                <a [routerLink]="['/invoice-line', invoiceKeyValue.invoiceLineId]">{{invoiceKeyValue.invoiceLineId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'invoice-key-value/'+ invoiceKeyValue.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

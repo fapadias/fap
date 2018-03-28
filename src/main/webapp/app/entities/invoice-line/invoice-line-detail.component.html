@@ -1,0 +1,36 @@
+
+<div *ngIf="invoiceLine">
+    <h2><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.detail.title">Invoice Line</span> {{invoiceLine.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.name">Name</span></dt>
+        <dd>
+            <span>{{invoiceLine.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.amount">Amount</span></dt>
+        <dd>
+            <span>{{invoiceLine.amount}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.invoiceLine.entryData">Entry Data</span></dt>
+        <dd>
+            <div *ngIf="invoiceLine.entryDataId">
+                <a [routerLink]="['/entry-data', invoiceLine.entryDataId]">{{invoiceLine.entryDataId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'invoice-line/'+ invoiceLine.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
