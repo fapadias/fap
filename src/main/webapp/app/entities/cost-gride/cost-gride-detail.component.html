@@ -1,0 +1,36 @@
+
+<div *ngIf="costGride">
+    <h2><span jhiTranslate="jhipsterSampleApplicationApp.costGride.detail.title">Cost Gride</span> {{costGride.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.costGride.fileName">File Name</span></dt>
+        <dd>
+            <span>{{costGride.fileName}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.costGride.version">Version</span></dt>
+        <dd>
+            <span>{{costGride.version}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.costGride.transporter">Transporter</span></dt>
+        <dd>
+            <div *ngIf="costGride.transporterId">
+                <a [routerLink]="['/transporter', costGride.transporterId]">{{costGride.transporterId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'cost-gride/'+ costGride.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

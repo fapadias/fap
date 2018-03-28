@@ -7,6 +7,15 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
+                "transporter": "Transporter",
+                "costGride": "Cost Gride",
+                "dimension": "Dimension",
+                "dimensionValue": "Dimension Value",
+                "metric": "Metric",
+                "metricValue": "Metric Value",
+                "entryData": "Entry Data",
+                "invoiceLine": "Invoice Line",
+                "invoiceKeyValue": "Invoice Key Value",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

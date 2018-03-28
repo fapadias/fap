@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "lines",
+            "otherEntityName": "invoiceLine",
+            "otherEntityRelationshipName": "entryData"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "transporter",
+            "otherEntityName": "transporter",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "documentName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "invoiceTotal",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180328154117",
+    "entityTableName": "entry_data",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,25 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "invoiceLine" : {
+            "home": {
+                "title": "Invoice Lines",
+                "createLabel": "Create a new Invoice Line",
+                "createOrEditLabel": "Create or edit a Invoice Line"
+            },
+            "created": "A new Invoice Line is created with identifier {{ param }}",
+            "updated": "A Invoice Line is updated with identifier {{ param }}",
+            "deleted": "A Invoice Line is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Invoice Line {{ id }}?"
+            },
+            "detail": {
+                "title": "Invoice Line"
+            },
+            "name": "Name",
+            "amount": "Amount",
+            "entryData": "Entry Data",
+            "attributes": "Attributes"
+        }
+    }
+}

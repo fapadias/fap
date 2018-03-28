@@ -1,0 +1,25 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "dimension" : {
+            "home": {
+                "title": "Dimensions",
+                "createLabel": "Créer un nouveau Dimension",
+                "createOrEditLabel": "Créer ou éditer un Dimension"
+            },
+            "created": "Un nouveau Dimension a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Dimension avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Dimension avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Dimension {{ id }} ?"
+            },
+            "detail": {
+                "title": "Dimension"
+            },
+            "name": "Name",
+            "type": "Type",
+            "costGride": "Cost Gride",
+            "metric": "Metric"
+        }
+    }
+}

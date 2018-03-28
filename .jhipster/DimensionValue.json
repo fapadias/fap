@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "dimension",
+            "otherEntityName": "dimension",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "metricValue",
+            "otherEntityName": "metricValue",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "stringValue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lowerBound",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "upperBound",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180328154114",
+    "entityTableName": "dimension_value",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

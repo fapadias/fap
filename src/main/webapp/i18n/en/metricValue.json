@@ -1,0 +1,25 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "metricValue" : {
+            "home": {
+                "title": "Metric Values",
+                "createLabel": "Create a new Metric Value",
+                "createOrEditLabel": "Create or edit a Metric Value"
+            },
+            "created": "A new Metric Value is created with identifier {{ param }}",
+            "updated": "A Metric Value is updated with identifier {{ param }}",
+            "deleted": "A Metric Value is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Metric Value {{ id }}?"
+            },
+            "detail": {
+                "title": "Metric Value"
+            },
+            "value": "Value",
+            "faceValue": "Face Value",
+            "dimensions": "Dimensions",
+            "metric": "Metric"
+        }
+    }
+}

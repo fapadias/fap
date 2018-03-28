@@ -1,0 +1,25 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "entryData" : {
+            "home": {
+                "title": "EntryData",
+                "createLabel": "Créer un nouveau Entry Data",
+                "createOrEditLabel": "Créer ou éditer un Entry Data"
+            },
+            "created": "Un nouveau Entry Data a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Entry Data avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Entry Data avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Entry Data {{ id }} ?"
+            },
+            "detail": {
+                "title": "Entry Data"
+            },
+            "documentName": "Document Name",
+            "invoiceTotal": "Invoice Total",
+            "lines": "Lines",
+            "transporter": "Transporter"
+        }
+    }
+}

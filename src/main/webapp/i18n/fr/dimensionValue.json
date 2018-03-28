@@ -1,0 +1,26 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "dimensionValue" : {
+            "home": {
+                "title": "DimensionValues",
+                "createLabel": "Créer un nouveau Dimension Value",
+                "createOrEditLabel": "Créer ou éditer un Dimension Value"
+            },
+            "created": "Un nouveau Dimension Value a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Dimension Value avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Dimension Value avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Dimension Value {{ id }} ?"
+            },
+            "detail": {
+                "title": "Dimension Value"
+            },
+            "stringValue": "String Value",
+            "lowerBound": "Lower Bound",
+            "upperBound": "Upper Bound",
+            "dimension": "Dimension",
+            "metricValue": "Metric Value"
+        }
+    }
+}
